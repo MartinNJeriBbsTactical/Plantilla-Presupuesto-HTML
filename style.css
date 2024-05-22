@@ -69,7 +69,7 @@ th {
 
 /* page */
 html {
-    font: 16px/1 'Open Sans', sans-serif;
+    font: 16px/1 'Poppins', sans-serif;
     overflow: auto;
     padding: 0.5in;
     background: var(--bbs-muted);
@@ -139,6 +139,14 @@ table.meta,
 table.inventory {
     margin: 0 0 3em;
     clear: both;
+}
+
+
+.topper
+{
+display: flex;
+justify-content: space-between;
+align-items: c;
 }
 
 article:after {
@@ -277,7 +285,7 @@ tr:hover .cut {
 }
 
 @page {
-    margin: 0;
+    margin: 0,20px;
 }
 
 /* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
