@@ -202,6 +202,7 @@ table.inventory th {
 
 table.inventory td {
     text-align: right;
+    max-height: 200px;
 }
 
 table.inventory td:first-child
