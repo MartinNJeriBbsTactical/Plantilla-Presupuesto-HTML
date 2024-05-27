@@ -119,8 +119,8 @@ table.meta {
 }
 
 table.balance {
-    float: right;
-    width: 36%;
+    float: left;
+    width: 45%;
 }
 
 table.meta:after,
