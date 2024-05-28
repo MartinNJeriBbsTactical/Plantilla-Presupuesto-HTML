@@ -3,89 +3,113 @@
 	<head>
 		<meta charset="utf-8">
 		<title>REMISIÓN</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://martinnjeribbstactical.github.io/Plantilla-Presupuesto-HTML/style.css">
+		
 		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
 	</head>
-	<body>
-		<header>
-			<img src="https://uploads-ssl.webflow.com/650c38842ccccd49bf7447dc/664b6a0c01e97ad95fc48a62_header-bbs.png" style="width: 100%;">
-		</header>
 
-		<article>
-			<h1>Recipient</h1>
-			<address>
-				<p>&lt;&lt;[id_cliente].[Nombre_cliente]&gt;&gt;<br>-</p>
-                <p class="small-text"><br>Email: &lt;&lt;[id_cliente].[Email]&gt;&gt;</p>
-                <p class="small-text">Cel:&lt;&lt;[id_cliente].[Celular]&gt;&gt;</p>
-			</address>
-			<table class="meta" >
+	<div class="header"></div>
+	<body style="margin: 15;">
+		
+		<article >
+			
+			<table class="meta">
 				<tr>
-					<th><span>Remisión #</span></th>
-					<td><span>&lt;&lt;[N_factura]&gt;&gt;</span></td>
+					<th><span>Cliente:</span></th>
+					<td><span>&lt;&lt;[Cliente]&gt;&gt;</span></td>
 				</tr>
 				<tr>
-					<th><span>Fecha</span></th>
-					<td><span>&lt;&lt;[Fecha]&gt;&gt;</span></td>
+					<th><span>Remisión #:</span></th>
+					<td><span>&lt;&lt;[ID_Presu]&gt;&gt;</span></td>
 				</tr>
 				<tr>
-					<th><span>Total</span></th>
-					<td><span>&lt;&lt;[TOTAL VENTA]&gt;&gt;</span></td>
+					<th><span>Fecha:</span></th>
+					<td><span>&lt;&lt;[Fecha_Presu]&gt;&gt;</span></td>
 				</tr>
+				<tr>
+					<th><span>Telefono:</span></th>
+					<td><span>&lt;&lt;[Telefono_Cliente]&gt;&gt;</span></td>
+				</tr>
+				<tr>
+					<th><span>Email:</span></th>
+					<td><span>&lt;&lt;[Email_Cliente]&gt;&gt;</span></td>
+				</tr>
+				<tr>
+					<th><span>Proyecto:</span></th>
+					<td><span>&lt;&lt;[Nombre_Proyecto]&gt;&gt;</span></td>
+				</tr>
+				<tr>
+					<th><span>Presupuesto:</span></th>
+					<td><span>&lt;&lt;[Nombre_Presu]&gt;&gt;</span></td>
+				</tr>
+				<tr>
+					<th><span>Direccíon:</span></th>
+					<td><span>&lt;&lt;[Direccíon_Instalacion]&gt;&gt;</span></td>
+				</tr>
+				
 			</table>
-			<table class="balance">
-				<p><span>&lt;&lt;start:FILTER(“€Resumen_Detalles_Presu”,[_thisrow].[ID_Presu]=[ID_Presu]) &gt;&gt;</span></p>
-				<tr>
-					<th><span>Total</span></th>
-					<td><span>&lt;&lt;[IVA+Total]&gt;&gt;</span></td>
-				</tr>
-				<tr>
-					<th><span>Otros conceptos</span></th>
-					<td><span data-prefix="$"></span><span>0.00</span></td>
-				</tr>
-				<tr>
-					<th><span>Total a pagar</span></th>
-					<td><span>&lt;&lt;[TOTAL VENTA]&gt;&gt;</span></td>
-				</tr>
-				<p><span>&lt;&lt; end &gt;&gt;</span></p>
-			</table>
-			<table class="inventory">
-				<thead>
+			
+			
+
+
+
+			<table class="inventory" >
+				<thead >
 					<tr>
-						<th><span>Producto</span></th>
+						<th style="width: 40%;"><span>Producto</span></th>
 						<th><span>Foto</span></th>
-						<th><span>Valor ud</span></th>
 						<th><span>Cantidad</span></th>
-						
-						<th><span>Operario</span></th>
-						<th><span>M_O_Total</span></th>
+						<th><span>Valor ud</span></th>
 						<th><span>Total</span></th>
 					</tr>
 				</thead>
 				<tbody>
 				<p><span>&lt;&lt;start:FILTER(“€Detalles_Presu”,and([ID_Art] &lt;&gt; “”,[_thisrow].[ID_Presu]=[ID_Presu])) &gt;&gt;</span></p>
 					<tr>
-						<td><a class="cut">-</a>&lt;&lt;[Art]&gt;&gt;</td>
+						<td><span>&lt;&lt;[Art]&gt;&gt;</span></td>
 						
 				        <td><span>&lt;&lt;[Foto_Equipo]&gt;&gt;</span></td>
-						<td><span>&lt;&lt;[Costo_Ud]&gt;&gt;</span></td>
 						<td><span>&lt;&lt;[UD]&gt;&gt;</span></td>
-						<td><span>&lt;&lt;[OPerario]&gt;&gt;</span></td>
-						<td><span>&lt;&lt;[M_O_Total]&gt;&gt;</span></td>
+						<td><span>&lt;&lt;[Costo_Ud]&gt;&gt;</span></td>
 						<td><span>&lt;&lt;[Total_Con_Margen]&gt;&gt;</span></td>
 					</tr>
 				<p><span>&lt;&lt; end &gt;&gt;</span></p>
 				</tbody>
 			</table>
+
+
+
+			<br>
+
+
+
+			<table class="balance">
+				<p><span>&lt;&lt;start:FILTER(“€Resumen_Detalles_Presu”,[_thisrow].[ID_Presu]=[ID_Presu]) &gt;&gt;</span></p>
+				<tr>
+					<th><span>Total</span></th>
+					<td><span>&lt;&lt;[Total_Con_Margen]&gt;&gt;</span></td>
+				</tr>
+				<tr>
+					<th><span>IVA 21%</span></th>
+					<td><span>&lt;&lt;[IVA]&gt;&gt;</span></td>
+				</tr>
+				<tr>
+					<th><span>Total a pagar</span></th>
+					<td><span>&lt;&lt;[IVA+Total]&gt;&gt;</span></td>
+				</tr>
+				<p><span>&lt;&lt; end &gt;&gt;</span></p>
+			</table>
+
+
+
 			
 		</article>
-		<aside>
-			<h1><span>Notas adicionales</span></h1>
-			<div>
-				<p>Pagos a la cuenta de ahorros bancolombia # </p>
-			</div>
-		</aside>
+		
 		<footer style="display: flex; flex-direction: column; align-items: center;">
 			<img src="https://uploads-ssl.webflow.com/650c38842ccccd49bf7447dc/664b6beb0fdedfdff84ec1f6_footer-bbs.png" style="width: 127%;">
 		</footer>
 	</body>
+	<div class="footer">
+		
+	</div>
 </html>
