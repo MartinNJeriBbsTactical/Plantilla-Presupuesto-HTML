@@ -80,7 +80,7 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0.5in;
-    background: var(--bbs-muted);
+    background: #FFF;
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
 }
 
@@ -170,7 +170,7 @@ aside h1 {
     border-width: 0 0 1px;
     padding-bottom: 0.5rem;
     margin: 0 0 1rem;
-    border-color: #fff;
+    border-color: var(--bbs-muted);
     border-bottom-style: solid;
 }
 
