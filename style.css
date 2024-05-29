@@ -170,7 +170,7 @@ aside h1 {
     border-width: 0 0 1px;
     padding-bottom: 0.5rem;
     margin: 0 0 1rem;
-    border-color: var(--bbs-muted);
+    border-color: #fff;
     border-bottom-style: solid;
 }
 
