@@ -211,7 +211,7 @@ aside h1 {
     }
     body {
         box-shadow: none;
-        margin: 50px;
+        margin: 0;
     }
     span:empty {
         display: none;
@@ -223,7 +223,7 @@ aside h1 {
 }
 
 @page {
-    margin: 5px;
+    margin: 50px;
 }
 
 /* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
