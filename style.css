@@ -18,26 +18,7 @@
     --bbs-navy: #0d151c;
 }
 
-/* content editable */
-*[contenteditable] {
-    border-radius: 0.25em;
-    min-width: 1em;
-    outline: 0;
-    cursor: pointer;
-}
 
-*[contenteditable]:hover,
-*[contenteditable]:focus,
-td:hover *[contenteditable],
-td:focus *[contenteditable],
-img.hover {
-    background: var(--bbs-light);
-    box-shadow: 0 0 1em 0.5em var(--bbs-muted);
-}
-
-span[contenteditable] {
-    display: inline-block;
-}
 
 /* heading */
 h1 {
@@ -137,7 +118,7 @@ article,
 article address,
 table.meta,
 table.inventory {
-    margin: 0 0 3em;
+    margin: 5 5 5em;
     clear: both;
 }
 
