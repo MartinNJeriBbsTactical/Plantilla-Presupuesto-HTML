@@ -99,7 +99,7 @@ table.inventory th {
 
 table.inventory td {
     text-align: center;
-    height: 80px;
+    max-height: 80px;
 
 }
 
