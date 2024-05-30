@@ -9,6 +9,7 @@
     padding: 0;
     text-decoration: none;
     vertical-align: top;
+    background: #fff;
 }
 
 :root {
@@ -26,14 +27,6 @@
     cursor: pointer;
 }
 
-*[contenteditable]:hover,
-*[contenteditable]:focus,
-td:hover *[contenteditable],
-td:focus *[contenteditable],
-img.hover {
-    background: var(--bbs-light);
-    box-shadow: 0 0 1em 0.5em var(--bbs-muted);
-}
 
 span[contenteditable] {
     display: inline-block;
