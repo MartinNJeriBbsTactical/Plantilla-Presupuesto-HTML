@@ -211,7 +211,7 @@ aside h1 {
     }
     body {
         box-shadow: none;
-        margin: 0;
+        margin: 10px;
     }
     span:empty {
         display: none;
