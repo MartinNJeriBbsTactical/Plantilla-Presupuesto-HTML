@@ -9,7 +9,6 @@
     padding: 0;
     text-decoration: none;
     vertical-align: top;
-    background: #fff;
 }
 
 :root {
@@ -176,9 +175,10 @@ aside h1 {
 
 .header {
     position: fixed;
-    top: 0;
+    top: 10;
+    background-color: aqua;
   }
   .footer {
     position: fixed;
-    bottom: 0;
+    bottom: 10;
   }
